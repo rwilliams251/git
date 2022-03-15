@@ -55,7 +55,7 @@ static int prepare_term(const char *editor)
 
 	git_config_get_bool("editor.stty", &need_saverestore);
 	if (need_saverestore)
-		return save_term(1);
+		return save_term(SAVE_TERM_DUPLEX);
 	return 0;
 }
 
